@@ -132,10 +132,10 @@ try {
         const Input = mentionByTag[0] ? mentionByTag[0] : mentionByReply ? mentionByReply : q ? numberQuery : false
     	const isEval = body.startsWith('=>')
     
-        const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
+        const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : true
         const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
         const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
-        const Antilinkgc = m.isGroup ? ntlinkgc.includes(m.chat) : false
+        const Antilinkgc = m.isGroup ? ntlinkgc.includes(m.chat) : true
         const AntiLinkYoutubeVid = m.isGroup ? ntilinkytvid.includes(from) : false
         const AntiLinkYoutubeChannel = m.isGroup ? ntilinkytch.includes(from) : false
         const AntiLinkInstagram = m.isGroup ? ntilinkig.includes(from) : false
@@ -143,7 +143,7 @@ try {
         const AntiLinkTiktok = m.isGroup ? ntilinktt.includes(from) : false
         const AntiLinkTelegram = m.isGroup ? ntilinktg.includes(from) : false
         const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
-        const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
+        const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : true
         const antiWame = m.isGroup ? ntwame.includes(from) : false
         const antiToxic = m.isGroup ? nttoxic.includes(from) : false
         
